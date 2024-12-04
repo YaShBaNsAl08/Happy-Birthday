@@ -1,4 +1,129 @@
-body {
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    font-family: 'Arial', sans-serif;
+    height: 100%;
+    background: linear-gradient(to bottom, #ff9a9e, #fad0c4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.welcome-container, .countdown-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.content {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 2s ease-in-out;
+}
+
+.animated-text {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ff6f61;
+    margin-bottom: 20px;
+    animation: textSlide 1.5s ease-out infinite alternate;
+}
+
+.subtext {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.explore-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background: #ff6f61;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.explore-btn:hover {
+    background: #e05246;
+}
+
+.countdown-container {
+    display: none;
+}
+
+.countdown-timer {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.time-block {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.time-block span {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ff6f61;
+}
+
+.time-block p {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #333;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes textSlide {
+    from {
+        transform: translateX(-10px);
+    }
+    to {
+        transform: translateX(10px);
+    }
+}
+
+@media (max-width: 768px) {
+    .animated-text {
+        font-size: 2rem;
+    }
+    .subtext {
+        font-size: 1rem;
+    }
+    .explore-btn {
+        font-size: 0.9rem;
+    }
+    .time-block span {
+        font-size: 1.5rem;
+    }
+}
+
+/* basic code down */
+/* body {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -107,77 +232,4 @@ button:hover {
         top: -10%;
         opacity: 0;
     }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background: #f3e5f5;
-    font-family: 'Arial', sans-serif;
-}
-
-.card {
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-h1 {
-    color: #e91e63;
-}
-
-button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background: #e91e63;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button:hover {
-    background: #d81b60;
 } */

@@ -3,6 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="welcome-container" id="welcome-section">
+        <div class="content">
+            <h1 class="animated-text">Happy Birthday, [YASH]! 🎉</h1>
+            <p class="subtext">Wishing you all the happiness in the world on your special day!</p>
+            <button class="explore-btn" onclick="showCountdown()">Go To Countdown</button>
+        </div>
+    </div>
+    <div class="countdown-container" id="countdown-section" style="display: none;">
+        <h1>Countdown to Your Special Day! 🎂</h1>
+        <div class="countdown-timer">
+            <div class="time-block">
+                <span id="days">00</span>
+                <p>Days</p>
+            </div>
+            <div class="time-block">
+                <span id="hours">00</span>
+                <p>Hours</p>
+            </div>
+            <div class="time-block">
+                <span id="minutes">00</span>
+                <p>Minutes</p>
+            </div>
+            <div class="time-block">
+                <span id="seconds">00</span>
+                <p>Seconds</p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+<!--basic code down-->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Birthday Wish</title>
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -14,40 +57,6 @@
             <div class="heart"></div>
             <div class="heart"></div>
         </div>
-        <p id="message"></p>
-        <button onclick="showMessage()">Click to reveal</button>
-    </div>
-    <script src="script.js"></script>
-</body>
-</html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- <!DOCTYPE html> -->
-<!-- <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Birthday Wish</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="card">
-        <h1>Happy Birthday, My Friend!</h1>
         <p id="message"></p>
         <button onclick="showMessage()">Click to reveal</button>
     </div>
