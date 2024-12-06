@@ -34,7 +34,23 @@
                 <p>Seconds</p>
             </div>
         </div>
+        <button class="explore-btn" style="margin-top: 20px;" onclick="showCarousel()">View Photo Memories</button>
     </div>
+
+<div class="carousel-container" id="carousel-section" style="display: none;">
+    <h1>Memories to Cherish! 📸</h1>
+    <div class="carousel">
+        <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+        <div class="carousel-slides">
+            <img src="1.jpg" alt="Photo 1" class="slide">
+            <img src="2.jpg" alt="Photo 2" class="slide">
+            <img src="3.jpg" alt="Photo 3" class="slide">
+        </div>
+        <button class="next" onclick="changeSlide(1)">&#10095;</button>
+    </div>
+    <button class="back-btn" onclick="showCountdown()">Back to Countdown</button>
+</div>
+
     <script src="script.js"></script>
 </body>
 </html>

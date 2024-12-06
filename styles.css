@@ -14,7 +14,7 @@ body, html {
     flex-direction: column;
 }
 
-.welcome-container, .countdown-container {
+.welcome-container, .countdown-container, .carousel-container {
     text-align: center;
     padding: 20px;
 }
@@ -87,6 +87,79 @@ body, html {
     color: #333;
 }
 
+
+.carousel {
+    position: relative;
+    max-width: 80%;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+.carousel-slides img {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.slide {
+    min-width: 100%;
+    display: none;
+}
+
+.slide.active {
+    display: block;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 18px;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover, .next:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.back-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background: #ff6f61;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 20px;
+}
+
+.back-btn:hover {
+    background: #e05246;
+}
+
+
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -119,6 +192,13 @@ body, html {
     }
     .time-block span {
         font-size: 1.5rem;
+    }
+    .carousel {
+        max-width: 100%;
+    }
+    .prev, .next {
+        font-size: 14px;
+        padding: 8px;
     }
 }
 

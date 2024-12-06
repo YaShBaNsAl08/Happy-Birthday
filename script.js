@@ -1,6 +1,7 @@
 function showCountdown() {
     document.getElementById('welcome-section').style.display = 'none';
     document.getElementById('countdown-section').style.display = 'block';
+    document.getElementById('carousel-section').style.display = 'none';
 }
 
 function updateCountdown() {
@@ -23,6 +24,32 @@ function updateCountdown() {
         document.querySelector('.countdown-timer').style.display = "none";
     }
 }
+
+// Photo Carousel Functionality
+let currentSlide = 0;
+
+function showCarousel() {
+    document.getElementById('countdown-section').style.display = 'none';
+    document.getElementById('carousel-section').style.display = 'block';
+    showSlide(currentSlide);
+}
+
+function changeSlide(direction) {
+    const slides = document.querySelectorAll('.slide');
+    slides[currentSlide].classList.remove('active');
+    currentSlide = (currentSlide + direction + slides.length) % slides.length;
+    slides[currentSlide].classList.add('active');
+}
+
+function showSlide(index) {
+    const slides = document.querySelectorAll('.slide');
+    slides.forEach(slide => slide.classList.remove('active'));
+    slides[index].classList.add('active');
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    showSlide(currentSlide);
+});
 
 setInterval(updateCountdown, 1000);
 
