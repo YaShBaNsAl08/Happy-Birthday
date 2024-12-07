@@ -32,6 +32,7 @@ function showCarousel() {
     document.getElementById('countdown-section').style.display = 'none';
     document.getElementById('carousel-section').style.display = 'block';
     showSlide(currentSlide);
+    document.getElementById('wish-section').style.display = 'none';
 }
 
 function changeSlide(direction) {
@@ -45,6 +46,10 @@ function showSlide(index) {
     const slides = document.querySelectorAll('.slide');
     slides.forEach(slide => slide.classList.remove('active'));
     slides[index].classList.add('active');
+}
+function showWish() {
+    document.getElementById('carousel-section').style.display = 'none';
+    document.getElementById('wish-section').style.display = 'block';
 }
 
 document.addEventListener('DOMContentLoaded', () => {
