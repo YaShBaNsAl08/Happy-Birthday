@@ -184,6 +184,81 @@ body, html {
     animation: fadeIn 3s ease-in-out;
 }
 
+#balloons-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.balloons {
+    position: absolute;
+    bottom: -100px;
+    width: 50px;
+    height: 70px;
+    background-color: #ff6f61;
+    border-radius: 50%;
+    animation: floatUp 5s infinite;
+}
+
+.balloons:after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 5px;
+    height: 20px;
+    background: #ff6f61;
+}
+
+.play-audio-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background: #ff6f61;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 20px;
+}
+
+.play-audio-btn:hover {
+    background: #e05246;
+}
+
+.confetti-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 1000;
+}
+
+.confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    opacity: 0.8;
+    animation: fall 3s ease-in-out forwards;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-100px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(100vh) rotate(720deg);
+    }
+}
 
 @keyframes fadeIn {
     from {
@@ -205,6 +280,16 @@ body, html {
     }
 }
 
+@keyframes floatUp {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100vh);
+        opacity: 0;
+    }
+}
 @media (max-width: 768px) {
     .animated-text {
         font-size: 2rem;
@@ -227,114 +312,4 @@ body, html {
     }
 }
 
-/* basic code down */
-/* body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background: #f3e5f5;
-    font-family: 'Arial', sans-serif;
-    overflow: hidden;
-}
-
-.card {
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    animation: fadeIn 2s ease-in-out;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-h1 {
-    color: #e91e63;
-    animation: pop 1s ease-in-out infinite alternate;
-}
-
-@keyframes pop {
-    from { transform: scale(1); }
-    to { transform: scale(1.1); }
-}
-
-button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background: #e91e63;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s ease-in-out;
-}
-
-button:hover {
-    background: #d81b60;
-}
-
-.heart-container {
-    position: relative;
-    width: 100%;
-    height: 200px;
-    overflow: hidden;
-}
-
-.heart {
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    background: #e91e63;
-    transform: rotate(-45deg);
-    animation: float 4s infinite;
-}
-
-.heart:before, .heart:after {
-    content: "";
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    background: #e91e63;
-    border-radius: 50%;
-}
-
-.heart:before {
-    top: -15px;
-    left: 0;
-}
-
-.heart:after {
-    left: 15px;
-    top: 0;
-}
-
-.heart:nth-child(1) {
-    left: 10%;
-    animation-delay: 0s;
-}
-
-.heart:nth-child(2) {
-    left: 50%;
-    animation-delay: 1s;
-}
-
-.heart:nth-child(3) {
-    left: 90%;
-    animation-delay: 2s;
-}
-
-@keyframes float {
-    0% {
-        top: 100%;
-        opacity: 1;
-    }
-    100% {
-        top: -10%;
-        opacity: 0;
-    }
-} */
+  
