@@ -4,7 +4,8 @@
     box-sizing: border-box;
 }
 
-body, html {
+body,
+html {
     font-family: 'Arial', sans-serif;
     height: 100%;
     background: linear-gradient(to bottom, #ff9a9e, #fad0c4);
@@ -14,7 +15,9 @@ body, html {
     flex-direction: column;
 }
 
-.welcome-container, .countdown-container, .carousel-container {
+.welcome-container,
+.countdown-container,
+.carousel-container {
     text-align: center;
     padding: 20px;
 }
@@ -101,6 +104,7 @@ body, html {
     display: flex;
     transition: transform 0.5s ease-in-out;
 }
+
 .carousel-slides img {
     width: 100%;
     height: auto;
@@ -118,7 +122,8 @@ body, html {
     display: block;
 }
 
-.prev, .next {
+.prev,
+.next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -139,7 +144,8 @@ body, html {
     right: 10px;
 }
 
-.prev:hover, .next:hover {
+.prev:hover,
+.next:hover {
     background: rgba(0, 0, 0, 0.8);
 }
 
@@ -255,6 +261,7 @@ body, html {
     0% {
         transform: translateY(-100px) rotate(0deg);
     }
+
     100% {
         transform: translateY(100vh) rotate(720deg);
     }
@@ -265,6 +272,7 @@ body, html {
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -275,6 +283,7 @@ body, html {
     from {
         transform: translateX(-10px);
     }
+
     to {
         transform: translateX(10px);
     }
@@ -285,31 +294,37 @@ body, html {
         transform: translateY(0);
         opacity: 1;
     }
+
     100% {
         transform: translateY(-100vh);
         opacity: 0;
     }
 }
+
 @media (max-width: 768px) {
     .animated-text {
         font-size: 2rem;
     }
+
     .subtext {
         font-size: 1rem;
     }
+
     .explore-btn {
         font-size: 0.9rem;
     }
+
     .time-block span {
         font-size: 1.5rem;
     }
+
     .carousel {
         max-width: 100%;
     }
-    .prev, .next {
+
+    .prev,
+    .next {
         font-size: 14px;
         padding: 8px;
     }
 }
-
-  
