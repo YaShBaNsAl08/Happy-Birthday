@@ -26,7 +26,7 @@ function updateCountdown() {
     iscountdown = false;
   } else {
     document.querySelector(".countdown-container h1").textContent =
-      "Happy Birthday! 🎉";
+      "For someone who means the world to me. 🎉";
     document.querySelector(".countdown-timer").style.display = "none";
     iscountdown = true;
   }
@@ -37,20 +37,20 @@ setInterval(updateCountdown, 1000);
 let currentSlide = 0;
 
 function showCarousel() {
-      if (!iscountdown) {
-        const text = [
-          "Patience is a virtue! The time isn’t here yet. 🎉",
-          "Sorry, the big moment is still on its way. ⏳",
-          "Hold on tight! It's not your birthday yet. 🕒",
-          "The clock is ticking, but it’s not time to celebrate just yet. ⌛",
-          "Not so fast! You’ll have to wait a little longer. 😜",
-          "Good things come to those who wait—check back later! 🎈",
-        ];
-        const randomText = text[Math.floor(Math.random() * text.length)];
-        document.querySelector(".countdown-container h1").textContent =
-          randomText;
-        return;
-      }
+      // if (!iscountdown) {
+      //   const text = [
+      //     "Patience is a virtue! The time isn’t here yet. 🎉",
+      //     "Sorry, the big moment is still on its way. ⏳",
+      //     "Hold on tight! It's not your birthday yet. 🕒",
+      //     "The clock is ticking, but it’s not time to celebrate just yet. ⌛",
+      //     "Not so fast! You’ll have to wait a little longer. 😜",
+      //     "Good things come to those who wait—check back later! 🎈",
+      //   ];
+      //   const randomText = text[Math.floor(Math.random() * text.length)];
+      //   document.querySelector(".countdown-container h1").textContent =
+      //     randomText;
+      //   return;
+      // }
   document.getElementById("countdown-section").style.display = "none";
   document.getElementById("carousel-section").style.display = "block";
   const birthdayAudio = document.getElementById("birthday-audio");
